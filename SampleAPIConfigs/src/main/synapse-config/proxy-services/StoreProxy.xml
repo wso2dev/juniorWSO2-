@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="StoreProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <property name="FORCE_SC_ACCEPTED" scope="axis2" type="STRING" value="true"/>
+            <store messageStore="MyStore" sequence="OnStore"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence>
+            <sequence key="OnError"/>
+        </faultSequence>
+    </target>
+</proxy>

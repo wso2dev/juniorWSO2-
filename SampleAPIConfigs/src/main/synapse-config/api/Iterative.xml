@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/iterative" name="Iterative" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <property description="messag" name="messagetype" scope="default" type="STRING" value="application/xml"/>
+            <payloadFactory media-type="xml">
+                <format>
+                    <messag xmlns="">
+                        <colors>
+                            <color>white</color>
+                            <color>blue</color>
+                            <color>green</color>
+                            <color>lavender</color>
+                        </colors>
+                    </messag>
+                </format>
+                <args>
+                    <arg value="messag"/>
+                </args>
+            </payloadFactory>
+            <iterate continueParent="true" expression="//colors/color" sequential="true">
+                <target>
+                    <sequence>
+                        <log level="custom">
+                            <property expression="get-property('messag')" name="colors"/>
+                        </log>
+                    </sequence>
+                </target>
+            </iterate>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

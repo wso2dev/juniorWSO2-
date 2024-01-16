@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="Request" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>Request.xsd</file>
+            <path>/_system/governance/CONTRACTS</path>
+            <mediaType>application/x-xsd+xml</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="Response" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>Response.xsd</file>
+            <path>/_system/governance/CONTRACTS</path>
+            <mediaType>application/x-xsd+xml</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="DataMapperConfig" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DataMapperConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="DataMapperConfig_inputSchema" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DataMapperConfig_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="DataMapperConfig_outputSchema" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DataMapperConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="DataMapperConfig_xsltStyleSheet" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>DataMapperConfig_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="Mapping" groupId="org.wso2.carbon.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>Mapping.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="NewConfig" groupId="org.wso2.carbon.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="Mapping_inputSchema" groupId="org.wso2.carbon.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>Mapping_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="requestSchema" groupId="org.wso2.carbon.SampleAPIRegistryResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>requestSchema.json</file>
+            <path>/_system/config/endpoints</path>
+            <mediaType>application/json</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="NewConfig" groupId="org.wso2.carbon.SampleAPIRegistryResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="NewConfig_inputSchema" groupId="org.wso2.carbon.SampleAPIRegistryResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="NewConfig_outputSchema" groupId="org.wso2.carbon.SampleAPIRegistryResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="NewConfig_xsltStyleSheet" groupId="org.wso2.carbon.SampleAPIRegistryResources.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>NewConfig_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+</artifacts>

@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: PropertyGroup
+  description: API Definition of PropertyGroup
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/propertygroup
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response

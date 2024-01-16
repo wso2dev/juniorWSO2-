@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/javacustommediator" name="JavaCustomMediator" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <class name="com.WSO2.Calculator.Calculator"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

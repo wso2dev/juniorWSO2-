@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sum" name="Sum" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <property name="property1" scope="default" type="INTEGER" value="10"/>
+            <property name="property2" scope="default" type="INTEGER" value="20"/>
+            <property expression="$ctx:property1 + $ctx:property2" name="sumResult" scope="default" type="INTEGER"/>
+            <log level="custom">
+                <property expression="$ctx:sumResult" name="SumResult"/>
+            </log>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/Test" name="LognDebug" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="full" separator=",">
+                <property name="####Test####" value="TestAPI"/>
+            </log>
+            <call>
+                <endpoint key="OpenEndpoint"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence>
+            <property expression="get-property('ERROR_MESSAGE')" name="ERROR_MESSAGE" scope="default" type="STRING"/>
+            <property expression="get-property('ERROR_CODE')" name="ERROR_CODE" scope="default" type="STRING"/>
+            <log level="full">
+                <property expression="get-property('ERROR_MESSAGE')" name="ERROR_MESSAGE"/>
+                <property expression="get-property('ERROR_CODE')" name="ERROR_CODE"/>
+            </log>
+            <respond/>
+        </faultSequence>
+    </resource>
+</api>

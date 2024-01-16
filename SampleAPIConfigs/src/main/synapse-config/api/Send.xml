@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/send" name="Send" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log level="full">
+                <property name="Insequence" value="insequence"/>
+            </log>
+            <send>
+                <endpoint key="PostEndpoint"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <!-- Use the script mediator to remove "name" and "job" fields -->
+            <script language="js"><![CDATA[// Parse the JSON payload
+                    var payload = mc.getPayloadJSON();
+
+                    // Remove "name" and "job" fields
+                    delete payload.name;
+                    delete payload.job;
+
+                    // Set the updated payload back to the message context
+                    mc.setPayloadJSON(payload);]]></script>
+            <log level="full">
+                <property name="Outsequence" value="outsequence"/>
+            </log>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="Clone_seq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property expression="$body" name="LOG"/>
+    </log>
+    <call>
+        <endpoint key="PostEndpoint"/>
+    </call>
+    <log level="custom">
+        <property expression="$body" name="LOG1"/>
+    </log>
+</sequence>

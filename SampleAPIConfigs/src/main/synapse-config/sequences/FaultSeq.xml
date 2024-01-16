@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="FaultSeq" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <sequence key="ErrorSeq"/>
+    <makefault version="soap11">
+        <code value="soap11Env:Server" xmlns:soap11Env="http://schemas.xmlsoap.org/soap/envelope/"/>
+        <reason value="WRONGG"/>
+        <role>WSO2</role>
+        <detail>Wrong</detail>
+    </makefault>
+    <log level="custom">
+        <property expression="$body" name="LOGG"/>
+    </log>
+    <payloadFactory media-type="json">
+        <format>{&#xd;
+"fault":$1&#xd;
+}</format>
+        <args>
+            <arg evaluator="xml" expression="$body"/>
+        </args>
+    </payloadFactory>
+    <respond/>
+</sequence>

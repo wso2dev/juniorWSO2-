@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: LoopBack1
+  description: API Definition of LoopBack1
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/loopback1
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response

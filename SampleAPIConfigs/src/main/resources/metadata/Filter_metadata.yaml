@@ -1,0 +1,11 @@
+---
+key: "Filter-1.0.0"
+name : "Filter"
+displayName : "Filter"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/filter"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

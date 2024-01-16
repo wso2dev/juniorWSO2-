@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/switch" name="Switch" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <property expression="json-eval($.Student)" name="Response1" scope="default" type="STRING"/>
+            <switch source="$ctx:Response1">
+                <case regex="Laxmi">
+                    <payloadFactory media-type="json">
+                        <format>{&#xd;
+"Response":$1&#xd;
+}</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('Response1')"/>
+                        </args>
+                    </payloadFactory>
+                </case>
+                <case regex="Priya">
+                    <payloadFactory media-type="json">
+                        <format>{&#xd;
+"Response":$1&#xd;
+}</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('Response1')"/>
+                        </args>
+                    </payloadFactory>
+                </case>
+                <default/>
+            </switch>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

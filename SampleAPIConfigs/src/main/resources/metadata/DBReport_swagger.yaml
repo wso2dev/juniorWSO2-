@@ -1,0 +1,17 @@
+openapi: 3.0.1
+info:
+  title: DBReport
+  description: API Definition of DBReport
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/DBReport
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response
+    post:
+      responses:
+        default:
+          description: Default response

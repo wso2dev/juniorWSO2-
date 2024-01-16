@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/dbllokup1" name="DBLookUp1" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <dblookup>
+                <connection>
+                    <pool>
+                        <driver>com.mysql.cj.jdbc.Driver</driver>
+                        <url>jdbc:mysql://localhost:3306/springboot</url>
+                        <user>root</user>
+                        <password>root</password>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[SELECT * FROM springboot.policy where policy_id=1]]></sql>
+                    <result column="policy_name" name="policy_name"/>
+                </statement>
+            </dblookup>
+            <log level="full"/>
+            <payloadFactory media-type="json">
+                <format>
+					{&#xd;
+					"Data" : {&#xd;
+					"policy_name" : $1&#xd;
+					}&#xd;
+					}
+				</format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:policy_name"/>
+                </args>
+            </payloadFactory>
+            <log level="custom">
+                <property expression="get-property('policy_name')" name="get"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

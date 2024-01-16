@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/New" name="New" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <property name="first" scope="default" type="STRING" value="laxmi"/>
+            <payloadFactory media-type="xml">
+                <format>
+                    <display xmlns="">$1</display>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('first')"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/DBReport" name="DBReport" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <!--  <log level="custom">
+                <property expression="get-property('policy_id')" name="PolicyID"/>
+                <property expression="get-property('policy_name')" name="PolicyName"/>
+                <property expression="get-property('s_no')" name="SNo"/>
+                
+            </log> -->
+            <propertyGroup>
+                <property expression="json-eval($.policy_id)" name="policy_id" scope="default" type="INTEGER"/>
+                <property expression="json-eval($.policy_name)" name="policy_name" scope="default" type="STRING"/>
+                <property expression="json-eval($.s_no)" name="s_no" scope="default" type="INTEGER"/>
+            </propertyGroup>
+            <log level="custom">
+                <property expression="get-property('policy_id')" name="PolicyID"/>
+                <property expression="get-property('policy_name')" name="PolicyName"/>
+                <property expression="get-property('s_no')" name="SNo"/>
+            </log>
+            <dbreport>
+                <connection>
+                    <pool>
+                        <driver>com.mysql.cj.jdbc.Driver</driver>
+                        <url>jdbc:mysql://172.16.110.240:3306/practice</url>
+                        <user>root</user>
+                        <password>Adm!n@123</password>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[INSERT INTO policy(policy_id,policy_name,s_no) VALUES (?,?,?)]]></sql>
+                    <parameter expression="get-property('policy_id')" type="INTEGER"/>
+                    <parameter expression="get-property('policy_name')" type="VARCHAR"/>
+                    <parameter expression="get-property('s_no')" type="INTEGER"/>
+                </statement>
+            </dbreport>
+            <log level="custom" separator=",">
+                <property name="DEBUG" value="*** DBReport executed successfully ***"/>
+                <property name="ErrorDescription" value="Exception in sequence"/>
+                <property expression="get-property('ERROR_MESSAGE')" name="ErrorMessage"/>
+                <property expression="get-property('ERROR_DETAIL')" name="ErrorDetail"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

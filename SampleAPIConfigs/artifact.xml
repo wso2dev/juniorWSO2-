@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="LognDebug" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/LognDebug.xml</file>
+    </artifact>
+    <artifact name="Test_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Test_swagger.yaml</file>
+    </artifact>
+    <artifact name="Test_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Test_metadata.yaml</file>
+    </artifact>
+    <artifact name="Response" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Response.xml</file>
+    </artifact>
+    <artifact name="Test1_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Test1_swagger.yaml</file>
+    </artifact>
+    <artifact name="Test1_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Test1_metadata.yaml</file>
+    </artifact>
+    <artifact name="Statuscode" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Statuscode.xml</file>
+    </artifact>
+    <artifact name="Test2_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Test2_swagger.yaml</file>
+    </artifact>
+    <artifact name="Test2_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Test2_metadata.yaml</file>
+    </artifact>
+    <artifact name="OpenEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/OpenEndpoint.xml</file>
+    </artifact>
+    <artifact name="CatEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/CatEndpoint.xml</file>
+    </artifact>
+    <artifact name="ErrorSeq" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ErrorSeq.xml</file>
+    </artifact>
+    <artifact name="Drop" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Drop.xml</file>
+    </artifact>
+    <artifact name="Drop_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Drop_swagger.yaml</file>
+    </artifact>
+    <artifact name="Drop_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Drop_metadata.yaml</file>
+    </artifact>
+    <artifact name="ConvertJsontoXml" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ConvertJsontoXml.xml</file>
+    </artifact>
+    <artifact name="ConvertJsontoXml_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ConvertJsontoXml_swagger.yaml</file>
+    </artifact>
+    <artifact name="ConvertJsontoXml_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ConvertJsontoXml_metadata.yaml</file>
+    </artifact>
+    <artifact name="New" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/New.xml</file>
+    </artifact>
+    <artifact name="New_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/New_swagger.yaml</file>
+    </artifact>
+    <artifact name="New_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/New_metadata.yaml</file>
+    </artifact>
+    <artifact name="Filter" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Filter.xml</file>
+    </artifact>
+    <artifact name="Filter_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Filter_swagger.yaml</file>
+    </artifact>
+    <artifact name="Filter_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Filter_metadata.yaml</file>
+    </artifact>
+    <artifact name="Send" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Send.xml</file>
+    </artifact>
+    <artifact name="Send_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Send_swagger.yaml</file>
+    </artifact>
+    <artifact name="Send_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Send_metadata.yaml</file>
+    </artifact>
+    <artifact name="PostEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/PostEndpoint.xml</file>
+    </artifact>
+    <artifact name="Switch" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Switch.xml</file>
+    </artifact>
+    <artifact name="Switch_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Switch_swagger.yaml</file>
+    </artifact>
+    <artifact name="Switch_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Switch_metadata.yaml</file>
+    </artifact>
+    <artifact name="HospitalServicesEP" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/HospitalServicesEP.xml</file>
+    </artifact>
+    <artifact name="SoapAPI" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/SoapAPI.xml</file>
+    </artifact>
+    <artifact name="SoapAPI_proxy_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/SoapAPI_proxy_metadata.yaml</file>
+    </artifact>
+    <artifact name="Store" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Store.xml</file>
+    </artifact>
+    <artifact name="Store_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Store_swagger.yaml</file>
+    </artifact>
+    <artifact name="Store_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Store_metadata.yaml</file>
+    </artifact>
+    <artifact name="SampleMS" groupId="com.example.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/SampleMS.xml</file>
+    </artifact>
+    <artifact name="ForEach" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ForEach.xml</file>
+    </artifact>
+    <artifact name="ForEach_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ForEach_swagger.yaml</file>
+    </artifact>
+    <artifact name="ForEach_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ForEach_metadata.yaml</file>
+    </artifact>
+    <artifact name="Enrich" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Enrich.xml</file>
+    </artifact>
+    <artifact name="Enrich_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Enrich_swagger.yaml</file>
+    </artifact>
+    <artifact name="Enrich_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Enrich_metadata.yaml</file>
+    </artifact>
+    <artifact name="SampleMP" groupId="com.example.message-processors" version="1.0.0" type="synapse/message-processors" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-processors/SampleMP.xml</file>
+    </artifact>
+    <artifact name="StoreProxy" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/StoreProxy.xml</file>
+    </artifact>
+    <artifact name="StoreProxy_proxy_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/StoreProxy_proxy_metadata.yaml</file>
+    </artifact>
+    <artifact name="OnError" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/OnError.xml</file>
+    </artifact>
+    <artifact name="OnStore" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/OnStore.xml</file>
+    </artifact>
+    <artifact name="MyStore" groupId="com.example.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/MyStore.xml</file>
+    </artifact>
+    <artifact name="Iterate" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Iterate.xml</file>
+    </artifact>
+    <artifact name="Iterate_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Iterate_swagger.yaml</file>
+    </artifact>
+    <artifact name="Iterate_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Iterate_metadata.yaml</file>
+    </artifact>
+    <artifact name="Iterative" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Iterative.xml</file>
+    </artifact>
+    <artifact name="Iterative_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Iterative_swagger.yaml</file>
+    </artifact>
+    <artifact name="Iterative_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Iterative_metadata.yaml</file>
+    </artifact>
+    <artifact name="Clone" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Clone.xml</file>
+    </artifact>
+    <artifact name="Clone_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Clone_swagger.yaml</file>
+    </artifact>
+    <artifact name="Clone_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Clone_metadata.yaml</file>
+    </artifact>
+    <artifact name="PropertyGroup" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/PropertyGroup.xml</file>
+    </artifact>
+    <artifact name="PropertyGroup_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/PropertyGroup_swagger.yaml</file>
+    </artifact>
+    <artifact name="PropertyGroup_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/PropertyGroup_metadata.yaml</file>
+    </artifact>
+    <artifact name="Sum" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Sum.xml</file>
+    </artifact>
+    <artifact name="Sum_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Sum_swagger.yaml</file>
+    </artifact>
+    <artifact name="Sum_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Sum_metadata.yaml</file>
+    </artifact>
+    <artifact name="Aggregate" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Aggregate.xml</file>
+    </artifact>
+    <artifact name="Aggregate_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Aggregate_swagger.yaml</file>
+    </artifact>
+    <artifact name="Aggregate_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Aggregate_metadata.yaml</file>
+    </artifact>
+    <artifact name="Aggregate1" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Aggregate1.xml</file>
+    </artifact>
+    <artifact name="Aggregate1_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Aggregate1_swagger.yaml</file>
+    </artifact>
+    <artifact name="Aggregate1_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Aggregate1_metadata.yaml</file>
+    </artifact>
+    <artifact name="Clone_seq" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Clone_seq.xml</file>
+    </artifact>
+    <artifact name="DBLookUp" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/DBLookUp.xml</file>
+    </artifact>
+    <artifact name="DBLookUp_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBLookUp_swagger.yaml</file>
+    </artifact>
+    <artifact name="DBLookUp_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBLookUp_metadata.yaml</file>
+    </artifact>
+    <artifact name="Customer_Read" groupId="com.example.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/Customer_Read.xml</file>
+    </artifact>
+    <artifact name="Customer_Read_proxy_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Customer_Read_proxy_metadata.yaml</file>
+    </artifact>
+    <artifact name="LoopBack" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/LoopBack.xml</file>
+    </artifact>
+    <artifact name="LoopBack_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/LoopBack_swagger.yaml</file>
+    </artifact>
+    <artifact name="LoopBack_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/LoopBack_metadata.yaml</file>
+    </artifact>
+    <artifact name="LoopBack1" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/LoopBack1.xml</file>
+    </artifact>
+    <artifact name="LoopBack1_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/LoopBack1_swagger.yaml</file>
+    </artifact>
+    <artifact name="LoopBack1_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/LoopBack1_metadata.yaml</file>
+    </artifact>
+    <artifact name="JavaCustomMediator" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/JavaCustomMediator.xml</file>
+    </artifact>
+    <artifact name="JavaCustomMediator_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/JavaCustomMediator_swagger.yaml</file>
+    </artifact>
+    <artifact name="JavaCustomMediator_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/JavaCustomMediator_metadata.yaml</file>
+    </artifact>
+    <artifact name="DBLookUp1" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/DBLookUp1.xml</file>
+    </artifact>
+    <artifact name="DBLookUp1_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBLookUp1_swagger.yaml</file>
+    </artifact>
+    <artifact name="DBLookUp1_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBLookUp1_metadata.yaml</file>
+    </artifact>
+    <artifact name="Sequence" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Sequence.xml</file>
+    </artifact>
+    <artifact name="Test" groupId="com.example.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/Test.xml</file>
+    </artifact>
+    <artifact name="storeapi" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/storeapi.xml</file>
+    </artifact>
+    <artifact name="storeapi_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/storeapi_swagger.yaml</file>
+    </artifact>
+    <artifact name="storeapi_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/storeapi_metadata.yaml</file>
+    </artifact>
+    <artifact name="log" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/log.xml</file>
+    </artifact>
+    <artifact name="RegisterEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/RegisterEndpoint.xml</file>
+    </artifact>
+    <artifact name="DBReport" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/DBReport.xml</file>
+    </artifact>
+    <artifact name="DBReport_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBReport_swagger.yaml</file>
+    </artifact>
+    <artifact name="DBReport_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBReport_metadata.yaml</file>
+    </artifact>
+    <artifact name="DBReport1" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/DBReport1.xml</file>
+    </artifact>
+    <artifact name="DBReport1_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBReport1_swagger.yaml</file>
+    </artifact>
+    <artifact name="DBReport1_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/DBReport1_metadata.yaml</file>
+    </artifact>
+    <artifact name="FaultSeq" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/FaultSeq.xml</file>
+    </artifact>
+    <artifact name="Customer_Soap" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Customer_Soap.xml</file>
+    </artifact>
+    <artifact name="Customer_Soap_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Customer_Soap_swagger.yaml</file>
+    </artifact>
+    <artifact name="Customer_Soap_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Customer_Soap_metadata.yaml</file>
+    </artifact>
+    <artifact name="Contract_Soap" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Contract_Soap.xml</file>
+    </artifact>
+    <artifact name="Contract_Soap_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Contract_Soap_swagger.yaml</file>
+    </artifact>
+    <artifact name="Contract_Soap_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/Contract_Soap_metadata.yaml</file>
+    </artifact>
+    <artifact name="CusConClone_soap" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CusConClone_soap.xml</file>
+    </artifact>
+    <artifact name="CusConClone_soap_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CusConClone_soap_swagger.yaml</file>
+    </artifact>
+    <artifact name="CusConClone_soap_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CusConClone_soap_metadata.yaml</file>
+    </artifact>
+</artifacts>

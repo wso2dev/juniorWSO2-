@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/loopback1" name="LoopBack1" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="full"/>
+            <payloadFactory media-type="json">
+                <format>{"response": "Hello from the Loopback API!"}</format>
+                <args/>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log/>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

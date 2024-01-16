@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="Customer_Read" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log>
+                <property name="Customer_Read" value="Entered the API"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>

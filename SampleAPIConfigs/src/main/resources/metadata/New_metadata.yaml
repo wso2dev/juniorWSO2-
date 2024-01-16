@@ -1,0 +1,11 @@
+---
+key: "New-1.0.0"
+name : "New"
+displayName : "New"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/New"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

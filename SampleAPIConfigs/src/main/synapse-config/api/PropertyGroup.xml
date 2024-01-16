@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/propertygroup" name="PropertyGroup" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="custom">
+                <property name="#########LOG1##########" value="Before Entering in to the process"/>
+            </log>
+            <propertyGroup>
+                <property name="groupProperty1" scope="default" type="INTEGER" value="10"/>
+                <property name="groupProperty2" scope="default" type="INTEGER" value="20"/>
+                <property expression="$ctx:groupProperty1 + $ctx:groupProperty2" name="Result" scope="default" type="STRING"/>
+            </propertyGroup>
+            <log level="custom">
+                <property expression="$ctx:Result" name="Result"/>
+            </log>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

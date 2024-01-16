@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/enrich" name="Enrich" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <call>
+                <endpoint key="PostEndpoint"/>
+            </call>
+            <property expression="json-eval($)" name="Response" scope="default" type="STRING"/>
+            <enrich>
+                <source clone="true" type="inline">{&#xd;
+    "name": "morpheus",&#xd;
+    "job": "leader"&#xd;
+}</source>
+                <target action="child" type="body"/>
+            </enrich>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

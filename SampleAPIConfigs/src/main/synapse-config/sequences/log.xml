@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="log" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <payloadFactory media-type="json">
+        <format>{"email": "user@example.com", "password": "secret123"}</format>
+        <args/>
+    </payloadFactory>
+    <call>
+        <endpoint key="RegisterEndpoint"/>
+    </call>
+    <property expression="json-eval($)" name="LOG2" scope="axis2" type="STRING"/>
+    <log level="full">
+        <property expression="get-property('LOG2')" name="LOGG"/>
+    </log>
+</sequence>

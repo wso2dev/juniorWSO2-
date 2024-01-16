@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/aggregate1" name="Aggregate1" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="custom">
+                <property name="0log" value="~~~~~~~~~~~~~~~~~~~~~~"/>
+            </log>
+            <clone sequential="true">
+                <target>
+                    <sequence>
+                        <log level="custom">
+                            <property name="1log" value="@@@@@@@@@@@@@@@@@@@"/>
+                        </log>
+                        <sequence key="Clone_seq"/>
+                        <log level="custom">
+                            <property name="2log" value="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"/>
+                        </log>
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <log>
+                            <property name="3log" value="########################"/>
+                        </log>
+                        <sequence key="Clone_seq"/>
+                        <log level="custom">
+                            <property name="4log" value="$$$$$$$$$$$$$$$$$$$$$$$$$$$$"/>
+                        </log>
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <log level="custom">
+                            <property name="5log" value="%%%%%%%%%%%%%%%%"/>
+                        </log>
+                        <sequence key="Clone_seq"/>
+                        <log level="custom">
+                            <property name="6log" value="**********************************"/>
+                        </log>
+                    </sequence>
+                </target>
+            </clone>
+            <payloadFactory media-type="json">
+                <format>$1</format>
+                <args>
+                    <arg evaluator="json" expression="$"/>
+                </args>
+            </payloadFactory>
+            <aggregate>
+                <completeCondition>
+                    <messageCount max="-1" min="-1"/>
+                </completeCondition>
+                <onComplete aggregateElementType="root" expression="json-eval($)">
+                    <log level="full">
+                        <property name="@@@@@@@@@@@@@@@@@@@@" value="$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"/>
+                    </log>
+                    <respond/>
+                </onComplete>
+            </aggregate>
+            <log level="custom">
+                <property name="7log" value="^^^^^^^^^^^^^^^^^^^^^^^^^"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

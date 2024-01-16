@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/foreach" name="ForEach" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <foreach expression="//CreateCustRequestRoot/Customers/Customer" id="1">
+                <sequence>
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <Customer xmlns="">
+                                <FullName>$1</FullName>
+                            </Customer>
+                        </format>
+                        <args>
+                            <arg evaluator="xml" expression="fn:concat(//firstname,' ',//lastname)"/>
+                        </args>
+                    </payloadFactory>
+                </sequence>
+            </foreach>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

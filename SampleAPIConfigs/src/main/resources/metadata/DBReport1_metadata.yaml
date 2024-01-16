@@ -1,0 +1,11 @@
+---
+key: "DBReport1-1.0.0"
+name : "DBReport1"
+displayName : "DBReport1"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/DBReport1"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

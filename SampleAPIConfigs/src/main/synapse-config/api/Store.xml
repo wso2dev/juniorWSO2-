@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/store" name="Store" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <store messageStore="Test" sequence="Clone_seq"/>
+            <log level="custom">
+                <property expression="$body" name="LOG1"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/clone" name="Clone" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <payloadFactory media-type="xml">
+                <format>
+                    <request>
+                        <param>value1</param>
+                        <param>value2</param>
+                        <param>value3</param>
+                    </request>
+                </format>
+                <args/>
+            </payloadFactory>
+            <!-- Clone the message into two copies -->
+            <clone id="cloneMediator">
+                <target>
+                    <sequence>
+                        <log level="custom">
+                            <property name="Branch" value="First"/>
+                            <property expression="$body" name="Payload"/>
+                        </log>
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <log level="custom">
+                            <property name="Branch" value="Second"/>
+                            <property expression="$body" name="Payload"/>
+                        </log>
+                    </sequence>
+                </target>
+            </clone>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

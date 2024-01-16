@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/DBReport1" name="DBReport1" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <propertyGroup>
+                <property expression="json-eval($.policy_name)" name="policy_name" scope="default" type="STRING"/>
+                <property expression="json-eval($.policy_id)" name="policy_id" scope="default" type="INTEGER"/>
+            </propertyGroup>
+            <log level="custom">
+                <property expression="get-property('policy_id')" name="PolicyID"/>
+                <property expression="get-property('policy_name')" name="PolicyName"/>
+            </log>
+            <dbreport>
+                <connection>
+                    <pool>
+                        <driver>com.mysql.jdbc.Driver</driver>
+                        <url>jdbc:mysql://localhost:3306/springboot</url>
+                        <user>root</user>
+                        <password>root</password>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[update springboot.policy set policy_name=? where policy_id=?]]></sql>
+                    <parameter expression="get-property('policy_name')" type="VARCHAR"/>
+                    <parameter expression="get-property('policy_id')" type="INTEGER"/>
+                </statement>
+            </dbreport>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

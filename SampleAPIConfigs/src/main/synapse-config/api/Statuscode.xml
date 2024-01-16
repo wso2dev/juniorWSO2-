@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/Test2" name="Statuscode" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <call>
+                <endpoint key="OpenEndpointssss"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence>
+            <sequence key="ErrorSeq"/>
+        </faultSequence>
+    </resource>
+</api>

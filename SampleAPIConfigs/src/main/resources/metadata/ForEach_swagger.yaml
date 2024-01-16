@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: ForEach
+  description: API Definition of ForEach
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/foreach
+paths:
+  /:
+    post:
+      responses:
+        default:
+          description: Default response

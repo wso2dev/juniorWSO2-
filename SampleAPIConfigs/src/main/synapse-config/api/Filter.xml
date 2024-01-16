@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/filter" name="Filter" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <call>
+                <endpoint key="CatEndpoint"/>
+            </call>
+            <!-- Extract the response content -->
+            <property expression="json-eval($)" name="Response" scope="default" type="STRING"/>
+            <!-- Set the response content type to JSON -->
+            <property name="Status" scope="default" type="STRING" value="Success"/>
+            <!-- Format the JSON response -->
+            <!-- Log success or failure -->
+            <filter regex="Success22" source="get-property('Status')">
+                <then>
+                    <log level="custom">
+                        <property name="Success" value="success"/>
+                    </log>
+                    <payloadFactory media-type="json">
+                        <format>
+							{"Status":"Success","Response":"$2"}
+						</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('Status')"/>
+                            <arg evaluator="xml" expression="get-property('Response')"/>
+                        </args>
+                    </payloadFactory>
+                </then>
+                <else>
+                    <log level="custom">
+                        <property name="fail" value="fail"/>
+                    </log>
+                    <property name="failed" scope="default" type="STRING" value="Internal server issue"/>
+                    <payloadFactory media-type="json">
+                        <format>
+							{"Status":"fail","Response":"$3"}
+						</format>
+                        <args>
+                            <arg evaluator="xml" expression="get-property('Status')"/>
+                            <arg evaluator="xml" expression="get-property('Response')"/>
+                            <arg evaluator="xml" expression="get-property('failed')"/>
+                        </args>
+                    </payloadFactory>
+                </else>
+            </filter>
+            <!-- Respond with the formatted JSON response -->
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

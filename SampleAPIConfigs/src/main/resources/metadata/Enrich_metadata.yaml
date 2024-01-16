@@ -1,0 +1,11 @@
+---
+key: "Enrich-1.0.0"
+name : "Enrich"
+displayName : "Enrich"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/enrich"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

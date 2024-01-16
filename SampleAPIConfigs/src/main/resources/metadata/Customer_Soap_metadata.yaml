@@ -1,0 +1,11 @@
+---
+key: "Customer_Soap-1.0.0"
+name : "Customer_Soap"
+displayName : "Customer_Soap"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/Customer_Soap"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

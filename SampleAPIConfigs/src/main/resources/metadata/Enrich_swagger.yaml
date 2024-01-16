@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: Enrich
+  description: API Definition of Enrich
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/enrich
+paths:
+  /:
+    post:
+      responses:
+        default:
+          description: Default response

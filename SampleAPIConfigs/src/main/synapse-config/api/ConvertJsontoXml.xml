@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/ConvertJsontoXml" name="ConvertJsontoXml" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <call>
+                <endpoint key="CatEndpoint"/>
+            </call>
+            <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

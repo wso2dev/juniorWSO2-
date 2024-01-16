@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/loopback" name="LoopBack" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <call>
+                <endpoint key="CatEndpoint"/>
+            </call>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="######LOOPBACK###########" value="using loopback"/>
+            </log>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

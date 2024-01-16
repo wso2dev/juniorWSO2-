@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/CusConClone_soap" name="CusConClone_soap" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <propertyGroup>
+                <property expression="json-eval($.CustomerId)" name="CustomerId" scope="default" type="STRING"/>
+                <property expression="json-eval($.ContractId)" name="ContractId" scope="default" type="STRING"/>
+            </propertyGroup>
+            <clone>
+                <target>
+                    <sequence>
+                        <payloadFactory media-type="xml">
+                            <format>
+                                <soapenv:Envelope xmlns:cus="http://ericsson.com/services/ws_CMI_7/customerread" xmlns:ses="http://ericsson.com/services/ws_CMI_7/sessionchange" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                                    <soapenv:Header>
+                                        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+                                            <wsse:UsernameToken wsu:Id="UsernameToken-9CB94E74AB4E285DDB17046069806971">
+                                                <wsse:Username>ADMX</wsse:Username>
+                                                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">ADMX</wsse:Password>
+                                            </wsse:UsernameToken>
+                                        </wsse:Security>
+                                    </soapenv:Header>
+                                    <soapenv:Body>
+                                        <cus:customerReadRequest>
+                                            <!--You may enter the following 2 items in any order-->
+                                            <!--Optional:-->
+                                            <cus:inputAttributes>
+                                                <!--You may enter the following 3 items in any order-->
+                                                <!--Optional:-->
+                                                <cus:csId>$1</cus:csId>
+                                                <!--Optional:-->
+                                            </cus:inputAttributes>
+                                            <!--Optional:-->
+                                            <cus:sessionChangeRequest>
+                                                <!--Optional:-->
+                                                <ses:values>
+                                                    <!--1 or more repetitions:-->
+                                                    <ses:item>
+                                                        <!--You may enter the following 2 items in any order-->
+                                                        <ses:key>?</ses:key>
+                                                        <ses:value>?</ses:value>
+                                                    </ses:item>
+                                                </ses:values>
+                                            </cus:sessionChangeRequest>
+                                        </cus:customerReadRequest>
+                                    </soapenv:Body>
+                                </soapenv:Envelope>
+                            </format>
+                            <args>
+                                <arg evaluator="xml" expression="$ctx:CustomerId"/>
+                            </args>
+                        </payloadFactory>
+                        <call>
+                            <endpoint>
+                                <address format="soap11" uri="http://172.16.110.237:4080/wsi/services">
+                                    <suspendOnFailure>
+                                        <initialDuration>-1</initialDuration>
+                                        <progressionFactor>-1</progressionFactor>
+                                        <maximumDuration>0</maximumDuration>
+                                    </suspendOnFailure>
+                                    <markForSuspension>
+                                        <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                                    </markForSuspension>
+                                </address>
+                            </endpoint>
+                        </call>
+                        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <payloadFactory media-type="xml">
+                            <format>
+                                <soapenv:Envelope xmlns:con="http://ericsson.com/services/ws_CIL_7/contractread" xmlns:ses="http://ericsson.com/services/ws_CIL_7/sessionchange" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                                    <soapenv:Header>
+                                        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+                                            <wsse:UsernameToken wsu:Id="UsernameToken-05E5B20EFB7524EEE216852580645311">
+                                                <wsse:Username>ADMX</wsse:Username>
+                                                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">ADMX</wsse:Password>
+                                            </wsse:UsernameToken>
+                                        </wsse:Security>
+                                    </soapenv:Header>
+                                    <soapenv:Body>
+                                        <con:contractReadRequest>
+                                            <con:inputAttributes>
+                                                <con:coId>$1</con:coId>
+                                            </con:inputAttributes>
+                                            <con:sessionChangeRequest>
+                                                <ses:values>
+                                                    <ses:item>
+                                                        <ses:key>BU_ID</ses:key>
+                                                        <ses:value>2</ses:value>
+                                                    </ses:item>
+                                                </ses:values>
+                                            </con:sessionChangeRequest>
+                                        </con:contractReadRequest>
+                                    </soapenv:Body>
+                                </soapenv:Envelope>
+                            </format>
+                            <args>
+                                <arg evaluator="xml" expression="$ctx:ContractId"/>
+                            </args>
+                        </payloadFactory>
+                        <call>
+                            <endpoint>
+                                <address format="soap11" statistics="enable" trace="enable" uri="http://172.16.110.237:4080/wsi/services">
+                                    <suspendOnFailure>
+                                        <initialDuration>-1</initialDuration>
+                                        <progressionFactor>-1</progressionFactor>
+                                        <maximumDuration>0</maximumDuration>
+                                    </suspendOnFailure>
+                                    <markForSuspension>
+                                        <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                                    </markForSuspension>
+                                </address>
+                            </endpoint>
+                        </call>
+                        <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+                    </sequence>
+                </target>
+            </clone>
+            <aggregate>
+                <completeCondition>
+                    <messageCount max="-1" min="-1"/>
+                </completeCondition>
+                <onComplete aggregateElementType="root" expression="json-eval($)">
+                    <log level="custom">
+                        <property name="Inside the Aggregator" value="Inside the Aggregator"/>
+                    </log>
+                </onComplete>
+            </aggregate>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

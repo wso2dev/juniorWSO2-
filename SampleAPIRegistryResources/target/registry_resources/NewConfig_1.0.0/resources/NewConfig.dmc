@@ -1,0 +1,56 @@
+map_S_root_S_data = function(){ 
+var outputdata={};
+
+var count_i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330 = 0;
+var count_i_lead_793f218c_fc27_4a63_adc6_731e984c8461 = 0;
+outputdata =  {};
+outputdata.owner =  {};
+outputdata.owner.item =  {};
+outputdata.lead =  {};
+outputdata.lead.item =  {};
+outputdata.sendNotificationEmail = inputroot.sendNotificationEmail;
+outputdata.convertedStatus = inputroot.convertedStatus;
+outputdata.doNotCreateOpportunity = inputroot.doNotCreateOpportunity;
+outputdata.opportunityName = inputroot.opportunityName;
+outputdata.overwriteLeadSource = inputroot.overwriteLeadSource;
+
+for(i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330 in inputroot.owner){
+outputdata.owner.item.ID = Number(inputroot.owner[i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330].ID);
+outputdata.owner.item.name = inputroot.owner[i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330].name;
+outputdata.owner.item.city = inputroot.owner[i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330].city;
+outputdata.owner.item.code = Number(inputroot.owner[i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330].code);
+outputdata.owner.item.country = inputroot.owner[i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330].country;
+
+count_i_owner_c8b838cf_f40e_4298_ac51_fa1a76182330++;
+}
+
+for(i_lead_793f218c_fc27_4a63_adc6_731e984c8461 in inputroot.lead){
+outputdata.lead.item.ID = Number(inputroot.lead[i_lead_793f218c_fc27_4a63_adc6_731e984c8461].ID);
+outputdata.lead.item.name = inputroot.lead[i_lead_793f218c_fc27_4a63_adc6_731e984c8461].name;
+outputdata.lead.item.city = inputroot.lead[i_lead_793f218c_fc27_4a63_adc6_731e984c8461].city;
+outputdata.lead.item.code = Number(inputroot.lead[i_lead_793f218c_fc27_4a63_adc6_731e984c8461].code);
+outputdata.lead.item.country = inputroot.lead[i_lead_793f218c_fc27_4a63_adc6_731e984c8461].country;
+
+count_i_lead_793f218c_fc27_4a63_adc6_731e984c8461++;
+}
+return outputdata;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

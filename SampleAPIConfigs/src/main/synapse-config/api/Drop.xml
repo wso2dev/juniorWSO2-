@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/drop" name="Drop" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log description="Jyst log enter property" level="custom">
+                <property name="Enter" value="Enter the property"/>
+            </log>
+            <property name="class" scope="default" type="STRING" value="Btech"/>
+            <log level="custom">
+                <property name="Property" value="After the property"/>
+            </log>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+"Class":"$1"&#xd;
+}</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('class')"/>
+                </args>
+            </payloadFactory>
+            <log level="custom">
+                <property name="payload" value="After the payload"/>
+            </log>
+            <drop/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

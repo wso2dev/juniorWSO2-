@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/Test1" name="Response" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <log level="full"/>
+            <call>
+                <endpoint key="CatEndpoint"/>
+            </call>
+            <property expression="json-eval($)" name="Response" scope="default" type="STRING"/>
+            <payloadFactory media-type="json">
+                <format>{
+"Status":"Success",
+"Response":$1
+}</format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('Response')"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
